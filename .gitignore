@@ -24,10 +24,12 @@
 # ignore everything in the "wordpress" directory, except:
 # mu-plugins, plugins, and themes directories
 wordpress/*
+#!wordpress/wp-content/mu-plugins/
+#!wordpress/wp-content/plugins/
+#!wordpress/wp-content/themes/
 
 # ignore all in folder
 # unless explicitly whitelisted at the end of this file
-
 #migrations/*
 
 # ignore all files starting with . or ~
