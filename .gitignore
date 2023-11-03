@@ -1,0 +1,99 @@
+# -----------------------------------------------------------------
+# .gitignore for WordPress Docker Development Environment
+# ver 1.0.0
+#
+# By default all files are ignored.  You'll need to whitelist
+# any files or folders you want to include in the repo.
+#
+# To ignore uncommitted changes in a file that is already tracked, use
+# git update-index --assume-unchanged
+#
+# To stop tracking a file that is currently tracked, use
+# git rm --cached
+#
+#   this version ignores all files by default
+# -----------------------------------------------------------------
+
+# ignore everything in the root except the "wordpress , migrations, docker" directory.
+/*
+
+!docker/
+!migrations/
+!wordpress/
+
+# ignore everything in the "wordpress" directory, except:
+# mu-plugins, plugins, and themes directories
+wordpress/*
+
+# ignore all in folder
+# unless explicitly whitelisted at the end of this file
+
+#migrations/*
+
+# ignore all files starting with . or ~
+.*
+~*
+
+# ignore node dependency directories (used by npm)
+node_modules/
+# ignore composer dependency directories (used by composer)
+vendor/
+
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
+
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# -------------------------
+# BEGIN Whitelisted Files
+# -------------------------
+
+# track these files, if they exist
+!.gitignore
+!.editorconfig
+!.phpcs.xml.dist
+!README.md
+!CHANGELOG.md
+!composer.json
+!database.sql
+!wordpress.sql
+!docker-compose.yml
+!.env.exemple
+
+
+# -------------------------
+# BEGIN Whitelisted Folders
+# -------------------------
+
+# track folders
+# add your own entries here
+#!wordpress/wp-content/mu-plugins/example-mu-plugin/
+#!wordpress/wp-content/plugins/example-plugin/
+#!wordpress/wp-content/themes/example-theme/
